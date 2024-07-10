@@ -1,0 +1,18 @@
+.bot-window-hidden {
+  display: none !important;
+}
+
+.bot-window-flexed {
+  grid-template-columns: none !important;
+}
+
+/* empty chat */
+
+.chat-uikit-on-boarding__bot,
+.common-wrapper {
+  flex-direction: column !important;
+}
+
+.chat-uikit-on-boarding__bot>span {
+  display: block !important;
+}

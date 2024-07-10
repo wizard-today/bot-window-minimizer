@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Coze chatbot minimizer",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.coze.com/space/*/bot/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icon/128-active.png"
+  },
+  "action": {},
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icon/500.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.coze.com/space/*/bot/*"
+      ],
+      "css": [
+        "style/window.css",
+        "style/loading.css"
+      ],
+      "js": [
+        "inject.js"
+      ]
+    }
+  ]
+}
